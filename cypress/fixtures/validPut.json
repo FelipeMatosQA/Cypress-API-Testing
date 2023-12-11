@@ -1,0 +1,10 @@
+{
+    "name": "Apple MacBook Pro 17",
+    "data": {
+       "year": 2018,
+       "price": 3049.99,
+       "CPU model": "Intel Core i7",
+       "Hard disk size": "2 TB",
+       "color": "Gold"
+    }
+ }
