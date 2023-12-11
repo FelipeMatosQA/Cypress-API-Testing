@@ -30,5 +30,13 @@ export default{
                 method: "DELETE",
                 url: `/objects/${id}`
             }).then((response)=> {return response})
+    },
+
+    deleteRequestFail(id){
+        return cy.request({
+                method: "DELETE",
+                failOnStatusCode: false,
+                url: `/objects/${id}`
+            }).then((response)=> {return response})
     }
 }

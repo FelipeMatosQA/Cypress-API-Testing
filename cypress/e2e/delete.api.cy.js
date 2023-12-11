@@ -28,7 +28,7 @@ describe("DELETE",()=>{
             
         const invalidId = 55555
         
-        requests.deleteRequest(invalidId)
+        requests.deleteRequestFail(invalidId)
             .then((responseDel)=>{
                 expect(responseDel.status)
                     .equal(404)
