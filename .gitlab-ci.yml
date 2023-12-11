@@ -1,0 +1,22 @@
+image: docker.io/cypress/browsers
+
+stages:
+  - build
+  - test
+  - notify
+
+schedule: '0 6 * * 1-5'
+
+build:
+  stage: build
+  script:
+    - npm install
+
+test:
+  stage: test
+  script:
+    - npx cypress run
+  artifacts:
+    paths:
+      - cypress\reports\html\index.html
+    expire_in: 1 day

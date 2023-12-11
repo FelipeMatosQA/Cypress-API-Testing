@@ -5,7 +5,6 @@ import responses from "../src/responses"
 
 
 describe("POST",()=>{
-
     it("Include a valid register", ()=>{
 
         requests.postRequest(postBody)

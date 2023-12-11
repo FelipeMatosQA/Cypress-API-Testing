@@ -11,8 +11,6 @@ describe("PUT",()=>{
 
     it("Alter a register with valid data", ()=>{
 
-    
-
         requests.postRequest(postBody)
             .then((responsePost)=>{
                 
@@ -24,11 +22,6 @@ describe("PUT",()=>{
                     .then((responsePut)=>{
                         responses.valResponseValidPut(responsePut,responsePost,putBody)  
             })
-
-        })
-        
-        
-
-       
+        })  
     })
 })
