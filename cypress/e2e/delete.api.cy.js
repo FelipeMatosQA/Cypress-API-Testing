@@ -1,6 +1,7 @@
 const { expect } = require("chai")
 const postBody = require("../fixtures/validPost.json")
 import requests from "../src/requests"
+import responses from "../src/responses"
 
 describe("DELETE",()=>{
 
@@ -8,16 +9,13 @@ describe("DELETE",()=>{
         
         requests.postRequest(postBody)
             .then((response)=>{
-                expect(response.status)
-                    .equal(200)
+                responses.valResponseValidPost(response,postBody)
+                
                 const id = response.body.id
 
                 requests.deleteRequest(id)
                     .then((responseDel)=>{
-                        expect(responseDel.status)
-                            .equal(200)
-                        expect(responseDel.body.message)
-                            .equal(`Object with id = ${id} has been deleted.`)
+                        responses.valResponseValidDelete(responseDel,id)
             })
 
         })
@@ -30,10 +28,7 @@ describe("DELETE",()=>{
         
         requests.deleteRequestFail(invalidId)
             .then((responseDel)=>{
-                expect(responseDel.status)
-                    .equal(404)
-                expect(responseDel.body.error)
-                    .equal(`Object with id = ${invalidId} doesn't exist.`)
+                responses.valResponseInvalidDelete(responseDel,invalidId)
         })
 
     })

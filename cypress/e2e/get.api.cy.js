@@ -1,5 +1,6 @@
 /// <reference types="cypress"/>
 import requests from "../src/requests"
+import responses from "../src/responses"
 
 describe("GET",()=>{
 
@@ -9,15 +10,7 @@ describe("GET",()=>{
         
         requests.getRequest(device_id)
             .then((response)=>{
-                expect(response.status)
-                    .equal(200)
-                expect(response.body.id)
-                    .equal(device_id)
-                expect(response.body).not.empty
-                expect(response.body.data).not.empty
-                expect(response.body.data.year).not.string
-                expect(response.body.data.price).not.string
-                expect(response.body.data["CPU model"]).not.empty
+                responses.valResponseValidGet(response,device_id);
             })
     })
 })

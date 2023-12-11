@@ -1,7 +1,8 @@
 const { expect } = require("chai")
 const postBody = require("../fixtures/validPost.json")
 import requests from "../src/requests"
-import postValidation from "../src/postValidation"
+import responses from "../src/responses"
+
 
 describe("POST",()=>{
 
@@ -9,7 +10,7 @@ describe("POST",()=>{
 
         requests.postRequest(postBody)
             .then((response)=>{
-                postValidation.valResponseValidPost(response,postBody)
+                responses.valResponseValidPost(response,postBody)
         })
             
     })
