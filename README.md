@@ -18,7 +18,7 @@ To clone this project from Github, run these commands:
 ## Clone this repository to a local directory.
 git clone https://github.com/FelipeMatosQA/Cypress-restful-API.dev.git
 ## Enter in the project folder
-cd Cypress-DemoQA-e2e
+cd Cypress-restful-API.dev
 ## Install the node modules
 npm install
 ## Install Cypress locally
