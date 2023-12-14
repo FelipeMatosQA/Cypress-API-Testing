@@ -1,4 +1,4 @@
-# Cypress-restful-API.dev
+# About the project
 
 On this portfolio project I used Cypress to automate the application "https://restful-api.dev/", this application is an example of open REST-API. 
 The purpose of this project was to interact with the CRUD application using Cypress and all HTTP verbs and test the REST concepts.
